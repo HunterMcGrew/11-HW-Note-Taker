@@ -6,12 +6,15 @@ class Note extends Model {}
 
 Note.init(
     {
-        id: {
+        note_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        body: {
+        note_title: {
+            type: DataTypes.STRING
+        },
+        note_body: {
             type: DataTypes.STRING
         }
     },
