@@ -2,6 +2,8 @@
 const router = required("express").Router();
 const Note = required("../../models/Note");
 
+// need to be able to GET notes too...
+
 // create a note (save)
 router.post("/", async (req, res) => {
     const createNote = await Note.create(
