@@ -1,6 +1,6 @@
 // required routing 
-const router = required("express").Router();
-const notes = required("./noteRoutes");
+const router = require("express").Router();
+const notes = require("./noteRoutes");
 
 router.use("/notes", notes);
 

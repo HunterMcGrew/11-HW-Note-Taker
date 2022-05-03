@@ -6,24 +6,24 @@ class Note extends Model {}
 
 Note.init(
     {
-        note_id: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        note_title: {
+        title: {
             type: DataTypes.STRING
         },
-        note_body: {
+        body: {
             type: DataTypes.STRING
-        }
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'note'
+        modelName: 'note',
     }
 );
 
