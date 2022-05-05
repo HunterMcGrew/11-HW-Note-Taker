@@ -3,6 +3,7 @@ const express = require("express");
 const routes = require("./routes");
 const sequelize = require("./config/connection");
 const path = require("path");
+const mysql = require('mysql');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -15,7 +16,7 @@ app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // connect to JawsDB
-var mysql = require('mysql');
+
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 connection.connect();
