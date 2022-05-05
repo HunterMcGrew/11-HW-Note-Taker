@@ -18,17 +18,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // connect to JawsDB
 
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+const con = mysql.createConnection({
+    // host: 'localhost',
+    // user: 'user',
+    // password: 'password',
+    database: process.env.JAWSDB_URL
+  });
+  
+  con.connect((err) => {
+    if(err){
+      console.log('Error connecting to Db');
+      return;
+    }
+    console.log('Connection established');
+  });
+  
+  con.end((err) => {
+    // The connection is terminated gracefully
+    // Ensures all remaining queries are executed
+    // Then sends a quit packet to the MySQL server.
+  });
 
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
-});
-
-connection.end();
+  
 // connect to db and server
 // sequelize.sync({ force: false })
 // .then(() => { 
