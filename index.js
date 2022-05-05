@@ -30,8 +30,8 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 
 connection.end();
 // connect to db and server
-sequelize.sync({ force: false })
-.then(() => { 
-    app.listen(PORT, () => console.log("Now listening on PORT 3001!"));
-});
+// sequelize.sync({ force: false })
+// .then(() => { 
+//     app.listen(PORT, () => console.log("Now listening on PORT 3001!"));
+// });
 
