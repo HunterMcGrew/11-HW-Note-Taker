@@ -22,7 +22,7 @@ const con = mysql.createConnection({
     host: 'z3iruaadbwo0iyfp.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'x9xf03tfmt5iazlz',
     password: 'a8k6osm41yh66ts3',
-    database: process.env.JAWSDB_URL
+    database: 'bn5c30bij4te4org'
   });
   
   con.connect((err) => {
