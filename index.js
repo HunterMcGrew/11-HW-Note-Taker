@@ -4,6 +4,7 @@ const routes = require("./routes");
 const sequelize = require("./config/connection");
 const path = require("path");
 const mysql = require('mysql');
+const dotenv = require("dotenv");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
