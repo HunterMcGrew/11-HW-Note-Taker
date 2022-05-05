@@ -2,10 +2,14 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +18,7 @@
     "express": "^4.16.4",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
-    "sequelize": "^6.19.0"
+    "sequelize": "^6.19.0",
+    "serve": "^13.0.2"
   }
 }
