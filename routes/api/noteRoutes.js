@@ -18,7 +18,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
     const createNote = await Note.create(
         {
-            id: req.body.id,
+            // id: req.body.id,
             title: req.body.title,
             body: req.body.body
         }

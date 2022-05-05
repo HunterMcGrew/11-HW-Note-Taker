@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended:true }));
 // turn on routes
 app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(require('./routes/api/noteRoutes'));
 
 // connect to JawsDB
 
