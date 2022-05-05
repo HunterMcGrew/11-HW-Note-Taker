@@ -19,9 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // connect to JawsDB
 
 const con = mysql.createConnection({
-    // host: 'localhost',
-    // user: 'user',
-    // password: 'password',
+    host: 'z3iruaadbwo0iyfp.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'x9xf03tfmt5iazlz',
+    password: 'a8k6osm41yh66ts3',
     database: process.env.JAWSDB_URL
   });
   
