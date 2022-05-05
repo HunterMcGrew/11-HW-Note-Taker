@@ -8,11 +8,12 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.16.4",
     "mysql2": "^2.3.3",
+    "path": "^0.12.7",
     "sequelize": "^6.19.0"
   }
 }
