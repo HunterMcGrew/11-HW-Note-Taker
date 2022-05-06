@@ -45,12 +45,16 @@ router.delete("/:id", async (req, res) => {
 });
 
 // delete a note
-router.delete("/:id", async (req, res) => {
-    const deleteNote = await Note.destroy({
-        where: { id: req.params.id,
-        },
-    });
-    res.json(deleteNote);
-});
+router.delete("/api/notes", (req, res) => removeNote(req.params.id).then(() => {
+    res.json({ ok: true }).catch((err) => res.status(500).json(err))
+}));
+
+// router.delete("/:id", async (req, res) => {
+//     const deleteNote = await Note.destroy({
+//         where: { id: req.params.id,
+//         },
+//     });
+//     res.json(deleteNote);
+// });
 
 module.exports = router;
