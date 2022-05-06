@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
         {
             // id: req.body.id,
             title: req.body.title,
-            body: req.body.body
+            text: req.body.text
         }
     );
     res.json(createNote);
@@ -31,7 +31,7 @@ router.delete("/:id", async (req, res) => {
     const updateNote = await Note.update(
         {
             title: req.body.title,
-            body: req.body.body
+            text: req.body.text
         },
         {
             where: {

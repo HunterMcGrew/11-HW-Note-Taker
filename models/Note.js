@@ -15,7 +15,7 @@ Note.init(
         title: {
             type: DataTypes.STRING
         },
-        body: {
+        text: {
             type: DataTypes.STRING
         },
     },
