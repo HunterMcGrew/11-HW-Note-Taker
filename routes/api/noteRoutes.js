@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
 });
 
 // update note
-router.delete("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
     const updateNote = await Note.update(
         {
             id: req.body.id,
@@ -45,16 +45,12 @@ router.delete("/:id", async (req, res) => {
 });
 
 // delete a note
-router.delete("/api/notes", (req, res) => removeNote(req.params.id).then(() => {
-    res.json({ ok: true }).catch((err) => res.status(500).json(err))
-}));
-
-// router.delete("/:id", async (req, res) => {
-//     const deleteNote = await Note.destroy({
-//         where: { id: req.params.id,
-//         },
-//     });
-//     res.json(deleteNote);
-// });
+router.delete("/:id", async (req, res) => {
+    const deleteNote = await Note.destroy({
+        where: { id: req.params.id,
+        },
+    });
+    res.json(deleteNote);
+});
 
 module.exports = router;
