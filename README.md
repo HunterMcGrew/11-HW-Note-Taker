@@ -11,6 +11,7 @@ This is a simple yet useful web app for jotting down notes!
 To install: 
 + run "npm i"
 + start the server
++ set up connection to your own Database
 + have fun taking notes
 
 ## License
