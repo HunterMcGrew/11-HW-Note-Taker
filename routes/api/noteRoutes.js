@@ -5,6 +5,7 @@ const Note = require("../../models/Note");
 // Get all notes
 router.get("/", async (req, res) => {
     const notes = await Note.findAll();
+    console.log(notes)
     return res.json(notes);
 });
 
@@ -18,7 +19,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
     const createNote = await Note.create(
         {
-            // id: req.body.id,
+            id: req.body.id,
             title: req.body.title,
             text: req.body.text
         }
