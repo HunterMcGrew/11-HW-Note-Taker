@@ -31,6 +31,7 @@ router.post("/", async (req, res) => {
 router.delete("/:id", async (req, res) => {
     const updateNote = await Note.update(
         {
+            id: req.body.id,
             title: req.body.title,
             text: req.body.text
         },
