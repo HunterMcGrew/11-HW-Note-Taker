@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
 });
 
 // update note
-router.put("/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     const updateNote = await Note.update(
         {
             title: req.body.title,
