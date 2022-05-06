@@ -3,7 +3,7 @@ const router = require("express").Router();
 const Note = require("../../models/Note");
 
 // Get all notes
-router.get("/api/notes", async (req, res) => {
+router.get("/", async (req, res) => {
     const notes = await Note.findAll();
     return res.json(notes);
 });
